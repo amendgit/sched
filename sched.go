@@ -53,7 +53,7 @@ func saveSession(task *tSchedTask) {
 
 }
 
-type tSchedTask struct {
+type tSchedTaskRec struct {
 	CmdString string
 	Duration  int
 	Id        string
@@ -64,7 +64,7 @@ type tSchedTask struct {
 const kConfigPathDefault = "$HOME/.sched/config.json"
 
 type tSchedConfig struct {
-	SchedTasks []tSchedTask
+	SchedTasks []tSchedTaskRec
 }
 
 func newConfigFromFile(path string) *tSchedConfig {
